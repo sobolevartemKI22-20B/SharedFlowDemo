@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.sharedflowdemo.ui.theme.SharedFlowDemoTheme
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +31,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ScreenSetup(modifier: Modifier = Modifier) {
+fun ScreenSetup(
+    modifier: Modifier = Modifier,
+    viewModel: DemoViewModel = viewModel()
+) {
     MainScreen(modifier)
 }
 @Composable
